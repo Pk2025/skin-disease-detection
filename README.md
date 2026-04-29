@@ -27,7 +27,34 @@ The goal of this project is to assist in **early detection of skin diseases** us
 
 ---
 
-##  Model Details
+ ## Model Details
+ ResNet50
+A deep convolutional neural network with skip connections
+Helps in solving vanishing gradient problems
+Provides high accuracy for image classification tasks
+ VGG16
+A simple and powerful CNN architecture
+Uses small convolution filters (3x3)
+Effective for feature extraction in medical images
+
+
+
+## Images 
+<img width="714" height="576" alt="image" src="https://github.com/user-attachments/assets/dd2b2673-5d92-4577-a172-9828f464d88a" />
+<img width="586" height="455" alt="image" src="https://github.com/user-attachments/assets/42b3316e-e561-42bf-9752-c23c913c2cba" />
+<img width="851" height="650" alt="image" src="https://github.com/user-attachments/assets/cd5a9734-7fd6-4f66-9f5b-5e76930fc374" />
+<img width="645" height="559" alt="image" src="https://github.com/user-attachments/assets/fd4f94b8-d0b0-4fe1-b9a5-f09c5f4b127f" />
+<img width="1042" height="411" alt="image" src="https://github.com/user-attachments/assets/8fb88931-ebf5-4c61-9fa5-0deb731088f7" />
+<img width="842" height="643" alt="image" src="https://github.com/user-attachments/assets/a5f8e839-31cc-4718-8e52-207b80f76c24" />
+<img width="500" height="534" alt="image" src="https://github.com/user-attachments/assets/1c67dcb5-c5e1-4d51-9b77-a4e64b4f4f77" />
+<img width="581" height="529" alt="image" src="https://github.com/user-attachments/assets/cae632df-c13c-45bf-bc3f-c2454abf6d9a" />
+
+
+
+
+
+
+
 
 ###  ResNet50
 
