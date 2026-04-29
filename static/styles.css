@@ -1,0 +1,193 @@
+/* Modern, accessible, responsive styles for Skin Disease Detector */
+:root {
+  --bg: #0b1020;
+  --card: #121734;
+  --muted: #a5b0d6;
+  --text: #e8edff;
+  --primary: #6ea8fe;
+  --primary-600: #5b8fee;
+  --accent: #8a7dff;
+  --danger: #ff6b6b;
+  --ring: rgba(110, 168, 254, 0.6);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 10% -10%, #141a38, transparent),
+              radial-gradient(1000px 700px at 110% 10%, #1a1f40, transparent),
+              var(--bg);
+}
+
+.container {
+  max-width: 980px;
+  margin: 48px auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.muted { color: var(--muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+}
+
+label { display: block; margin: 10px 0 6px; color: var(--muted); }
+
+select, button, .file-input {
+  width: 100%;
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #0f1530;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+button {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: transform 0.06s ease, filter 0.1s ease;
+}
+
+button:hover { filter: brightness(1.05); }
+button:active { transform: translateY(1px) scale(0.995); }
+
+.uploader {
+  position: relative;
+  border: 2px dashed rgba(255,255,255,0.18);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.uploader.dragover {
+  border-color: var(--primary);
+  background: rgba(110, 168, 254, 0.07);
+  box-shadow: 0 0 0 6px var(--ring);
+}
+
+.uploader input[type="file"] { display: none; }
+
+.uploader .hint {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.preview {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (max-width: 560px) { .preview { grid-template-columns: 1fr; } }
+
+.preview img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #0e1430;
+  color: var(--muted);
+}
+
+.actions { display: flex; gap: 12px; margin-top: 14px; }
+.actions > * { flex: 1; }
+
+.result-card h3 { margin-top: 0; }
+.result-badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(138, 125, 255, 0.18);
+  border: 1px solid rgba(138, 125, 255, 0.35);
+}
+
+.hidden { display: none; }
+
+.spinner {
+  width: 22px; height: 22px;
+  border: 3px solid rgba(255,255,255,0.25);
+  border-top-color: var(--text);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.footer {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+
